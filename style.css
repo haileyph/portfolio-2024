@@ -23,6 +23,12 @@ body{
     font-family: 'Space Grotesk', sans-serif;
     color: var(--raisin);
     background-color: var(--cream);
+    /* background-image: url(assets/backgrounds/cream_pixels.png) ; */
+    /* background-image: url(assets/backgrounds/ps_neutral.png) ; */
+    /* background-image: url(assets/backgrounds/vertical-waves.png) ; */
+    /* background-image: url(assets/backgrounds/wavegrid.png) ; */
+
+    /* background-repeat:repeat; */
     overflow-x: hidden;
 }
 
@@ -32,8 +38,79 @@ header {
     top:0;
     left:0;
     width: 100%;
+    /* change thisssssssssssssssssssssssssssssssvvvvvvvvvvvvvvvvv */
+    height: 80px; 
     overflow: hidden;
     z-index: 2;
+}
+
+.wave{
+    height: 100px;
+    /* position: fixed; */
+    background-color: var(--lpink);
+    margin: 0 -300px;
+    /* background: linear-gradient(90deg, #27b6b9 0%, #0f4061 100%); */
+}
+
+.wave::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image:
+        radial-gradient(circle at 10px -5px, transparent 12px, var(--cream) 13px);
+}
+.wave::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 15px;
+    background-size: 40px 20px;
+    background-image:
+        radial-gradient(circle at 10px 15px, var(--cream) 12px, transparent 13px);
+}
+
+.wave-up{
+    /* position: fixed; */
+    height: 100px;
+    /* width: 100%; */
+    bottom: 0;
+    background-color: var(--lpink);
+    margin: 0 -300px;
+    /* transform: rotate(180DEG); */
+    /* background: linear-gradient(90deg, #27b6b9 0%, #0f4061 100%); */
+}
+
+.wave-up::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image:
+        radial-gradient(circle at 10px 15px, transparent 12px, var(--cream) 13px);
+}
+.wave-up::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 15px;
+    background-size: 40px 20px;
+    background-image:
+        radial-gradient(circle at 10px 0px, var(--cream) 12px, transparent 13px);
 }
 
 .header-tablet{
@@ -572,7 +649,7 @@ dotlottie-player.coupon{
     }
     
     header{
-        height: 100px;
+        height: 95px;
     }
 
     .vine-flower{
