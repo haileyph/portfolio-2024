@@ -538,8 +538,8 @@ dotlottie-player.coupon{
 .img-swap {
     position: relative;
     display: inline-block;
-    margin: 50px;
 }
+
 .img-swap .img-top {
     display: none;
     position: absolute;
@@ -814,6 +814,9 @@ dotlottie-player.coupon{
         line-height: 26px;
     }
 
+    .img-swap {
+        margin: 50px;
+    }
 }
 
 /* -------------------------------------- DESKTOP */
