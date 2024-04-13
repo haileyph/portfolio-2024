@@ -16,12 +16,18 @@ html {
 /* -------------------------------------- MOBILE */
 
 body{
+    
     position: relative;
     margin:0;
     margin-top: -20px;
     padding: 0 20px;
     font-family: 'Space Grotesk', sans-serif;
     color: var(--raisin);
+
+    /* background-color: #FFFCF4;
+    opacity: 1;
+    background-image:  linear-gradient(#F6F2E9 0.4px, transparent 0.4px), linear-gradient(to right, #F6F2E9 0.4px, #FFFCF4 0.4px);
+    background-size: 8px 8px; */
     background-color: var(--cream);
     /* background-image: url(assets/backgrounds/cream_pixels.png) ; */
     /* background-image: url(assets/backgrounds/ps_neutral.png) ; */
@@ -39,15 +45,20 @@ header {
     left:0;
     width: 100%;
     /* change thisssssssssssssssssssssssssssssssvvvvvvvvvvvvvvvvv */
-    height: 80px; 
+    height: 75px; 
     overflow: hidden;
     z-index: 2;
 }
 
 .wave{
-    height: 100px;
+    z-index: -1;
+    height: 90px;
     /* position: fixed; */
-    background-color: var(--lpink);
+    background-color: #FBA193;
+    opacity: 1;
+    background-image:  linear-gradient(#fbc7be 0.4px, transparent 0.4px), linear-gradient(to right, #fbc7be 0.4px, #FBA193 0.4px);
+    background-size: 8px 8px;
+    /* background-color: var(--lpink); */
     margin: 0 -300px;
     /* background: linear-gradient(90deg, #27b6b9 0%, #0f4061 100%); */
 }
@@ -56,25 +67,25 @@ header {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 5px;
     right: 0;
     background-repeat: repeat;
     height: 10px;
     background-size: 20px 20px;
     background-image:
-        radial-gradient(circle at 10px -5px, transparent 12px, var(--cream) 13px);
+        radial-gradient(circle at 10px -5px, transparent 12px, var(--dgreen) 13px);
 }
 .wave::after{
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 5px;
     right: 0;
     background-repeat: repeat;
     height: 15px;
     background-size: 40px 20px;
     background-image:
-        radial-gradient(circle at 10px 15px, var(--cream) 12px, transparent 13px);
+        radial-gradient(circle at 10px 15px, var(--dgreen) 12px, transparent 13px);
 }
 
 .wave-up{
@@ -82,7 +93,10 @@ header {
     height: 100px;
     /* width: 100%; */
     bottom: 0;
-    background-color: var(--lpink);
+    background-color: #FBA193;
+    opacity: 1;
+    background-image:  linear-gradient(#fbc7be 0.4px, transparent 0.4px), linear-gradient(to right, #fbc7be 0.4px, #FBA193 0.4px);
+    background-size: 8px 8px;
     margin: 0 -300px;
     /* transform: rotate(180DEG); */
     /* background: linear-gradient(90deg, #27b6b9 0%, #0f4061 100%); */
@@ -383,6 +397,7 @@ p{
 }
 
 .main-thumbnail:hover{
+    filter: drop-shadow(2px 2px 5px #dcd9d2);
     -moz-transform: scale(1.02);
     -webkit-transform: scale(1.02);
     -o-transform: scale(1.02);
@@ -911,7 +926,7 @@ dotlottie-player.coupon{
     }
 
     dotlottie-player.pointer{
-        z-index:10;
+        z-index:1;
         position: absolute;
         top:65px;
         right: 110px;
@@ -1002,7 +1017,15 @@ dotlottie-player.coupon{
         width: 24vw;
         padding: 25px 30px 15px;
         z-index:1;
-        background: var(--llgreen);
+        /* background-color: #E2E6D3;
+        opacity: 1;
+        background-image:  linear-gradient(#aebe98 0.4px, transparent 0.4px), linear-gradient(to right, #aebe98 0.4px, #E2E6D3 0.4px);
+        background-size: 8px 8px; */
+        background-color: #E2E6D3;
+opacity: 1;
+background-image: linear-gradient(to right, #d3dbc8, #d3dbc8 7px, #E2E6D3 7px, #E2E6D3 );
+background-size: 14px 100%;
+        /* background: var(--llgreen); */
         border-radius: 0 45px 45px 45px;
     }
 
@@ -1016,7 +1039,7 @@ dotlottie-player.coupon{
     .leaf{
         width: 10vw;
         height: 10vw;
-        filter: drop-shadow(2px 2px 9px var(--dgreen));
+        /* filter: drop-shadow(2px 2px 9px var(--dgreen)); */
         /* border: var(--dgreen) 5px solid; */
         -webkit-transition: -webkit-transform .2s ease-out; 
         -moz-transition: -moz-transform .2s ease-out; 
@@ -1025,6 +1048,8 @@ dotlottie-player.coupon{
     }
 
     .leaf:hover{
+        filter: drop-shadow(2px 2px 5px #8ea39d);
+
         -moz-transform: scale(1.05);
         -webkit-transform: scale(1.05);
         -o-transform: scale(1.05);
@@ -1327,3 +1352,16 @@ dotlottie-player.coupon{
 
 }
 
+/* -------------------------------------- EXTRA DISPLAY */
+@media screen and (min-width: 1500px){
+    .iframe-container{
+        width: 42vw;
+        height: 42vw;
+        margin-right:50px;
+    }
+    dotlottie-player.pointer{
+        top: 85px;
+        right: 200px;
+
+    }
+}
