@@ -60,14 +60,13 @@ header {
     background-size: 8px 8px;
     /* background-color: var(--lpink); */
     margin: 0 -300px;
-    /* background: linear-gradient(90deg, #27b6b9 0%, #0f4061 100%); */
 }
 
 .wave::before{
     content: "";
     position: absolute;
     left: 0;
-    bottom: 5px;
+    bottom: 0px;
     right: 0;
     background-repeat: repeat;
     height: 10px;
@@ -79,7 +78,7 @@ header {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 5px;
+    bottom: 0px;
     right: 0;
     background-repeat: repeat;
     height: 15px;
@@ -664,7 +663,7 @@ dotlottie-player.coupon{
     }
     
     header{
-        height: 95px;
+        height: 90px;
     }
 
     .vine-flower{
@@ -856,6 +855,8 @@ dotlottie-player.coupon{
         margin-left:5px;
     }
 
+    
+
     /* ABOUT */
     .intro-container{
         flex-direction: row;
@@ -889,7 +890,9 @@ dotlottie-player.coupon{
         color: var(--raisin)
     }
 
-    
+    p.a-an{
+        margin-left: -12px;
+    }
     
     .intro h3{
         margin: 10px 0;
@@ -910,7 +913,28 @@ dotlottie-player.coupon{
         margin: 50px;
     }
 }
-
+/* -------------------------------------- TABLET HORIZONTAL */
+@media screen and (min-width: 1000px){
+    main{
+        margin-top: 18vw;
+    }
+    .iframe-container{
+        display: block;
+        width: 37vw;
+        height: 37vw;
+        margin-right: 10px;
+        margin-top: 30px;
+    }
+    dotlottie-player.pointer{
+        z-index:1;
+        position: absolute;
+        top: 35px;
+        right: 70px;
+        width: 100px; 
+        height: 100px;
+        /* transform: rotate(-28deg); */
+    }
+}
 /* -------------------------------------- DESKTOP */
 @media screen and (min-width: 1200px){
     .intro-container{
@@ -919,20 +943,15 @@ dotlottie-player.coupon{
 
     .iframe-container{
         display: block;
-        width: 37vw;
-        height: 37vw;
         margin-right: -10px;
         margin-top: 20px;
     }
 
     dotlottie-player.pointer{
-        z-index:1;
-        position: absolute;
-        top:65px;
-        right: 110px;
-        width: 40px; 
-        height: 40px;
-        transform: rotate(-28deg);
+        top: 2.2vw;
+        right: 6vw;
+        width: 120px; 
+        height: 120px;
     }
 
     .inst-icon-container{
@@ -1136,9 +1155,7 @@ background-size: 14px 100%;
         margin-bottom: 20px;
     }
 
-    p.a-an{
-        margin-left: -12px;
-    }
+    
 
     .flower-icon{
         width: 40px;
@@ -1360,8 +1377,9 @@ background-size: 14px 100%;
         margin-right:50px;
     }
     dotlottie-player.pointer{
-        top: 85px;
-        right: 200px;
-
+        top: 2.5vw;
+        right: 9vw;
+        width: 150px; 
+        height: 150px;
     }
 }
