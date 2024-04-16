@@ -607,6 +607,14 @@ h2 span{
 
 }
 
+span.green-span{
+    color: var(--dgreen);
+    font-weight: 600;
+
+}
+
+
+
 .what-i-learned{
     background-color: var(--dcream);
     padding: 20px;
